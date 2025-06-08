@@ -1,0 +1,17 @@
+<!-- login.html -->
+<form onsubmit="return checkPassword()">
+  <input type="password" id="pw" placeholder="Enter password">
+  <button type="submit">Enter</button>
+</form>
+<script>
+function checkPassword() {
+  const pw = document.getElementById('pw').value;
+  if (pw === 'yourpassword') {
+    window.location.href = 'interns.html';
+    return false;
+  } else {
+    alert('Incorrect password');
+    return false;
+  }
+}
+</script>
