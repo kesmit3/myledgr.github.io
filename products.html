@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myLedgr Products</title>
+  <style>
+    :root {
+      --primary-color: #0a2342;
+      --accent-color: #007bff;
+      --background-color: #ffffff;
+      --text-color: #333;
+      --light-gray: #f4f4f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-gray);
+      color: var(--text-color);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1.5rem 1rem 1rem;
+      border-bottom: 4px solid var(--accent-color);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: var(--primary-color);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    section.products {
+      margin-top: 2rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product {
+      background-color: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .product-logo {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 1rem;
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .product h2 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .product p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Products</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="team.html">Our Team</a>
+  </nav>
+
+  <section class="products">
+    <div class="product">
+      <div class="product-logo">CS</div>
+      <h2>Career Scorecard</h2>
+      <p>
+        A personalized dashboard that helps learners and professionals track skills, achievements, and career progress. Integrated with academic records, internships, and job experiences to build a meaningful career trajectory and match emerging opportunities.
+      </p>
+    </div>
+
+    <div class="product">
+      <div class="product-logo">AI</div>
+      <h2>AI-Powered Life Ledger</h2>
+      <p>
+        A smart assistant that helps users document key milestones in their educational, career, and wellness journey. Enables secure, structured narrative-building and can be used for storytelling, applications, or reflective insight.
+      </p>
+    </div>
+
+    <div class="product">
+      <div class="product-logo">HX</div>
+      <h2>Human Experience Index</h2>
+      <p>
+        A future-facing tool that aggregates meaningful life metrics (engagement, contribution, resilience) to help individuals and communities understand and grow personal and collective impact.
+      </p>
+    </div>
+  </section>
+</body>
+</html>
