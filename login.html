@@ -1,1 +1,107 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intern Login - myLedgr</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input {
+      padding: 0.5rem;
+      margin: 1rem 0;
+      width: 200px;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #0a2342;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Intern Access</h2>
+    <form onsubmit="return checkPassword()">
+      <input type="password" id="pw" placeholder="Enter password">
+      <br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script>
+    function checkPassword() {
+      const pw = document.getElementById('pw').value;
+      if (pw === 'myledgr2024') {
+        window.location.href = 'interns.html';
+        return false;
+      } else {
+        alert('Incorrect password');
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!-- interns.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intern Resources - myLedgr</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      background-color: white;
+      padding: 2rem;
+      margin: auto;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    a.download-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0a2342;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome Interns</h1>
+    <p>Download your application and required documents below.</p>
+    <a class="download-button" href="intern-application.pdf" download>Download Application PDF</a>
+  </div>
+</body>
+</html>
 
