@@ -6,11 +6,11 @@
   <title>myLedgr</title>
   <style>
     :root {
-      --primary-color: #0a2342; /* Navy */
+      --primary-color: #0a2342;
       --accent-color: #007bff;
-      --background-color: #ffffff;
+      --background-start: #f4f4f9;
+      --background-end: #e1e9f0;
       --text-color: #333;
-      --light-gray: #f4f4f9;
     }
 
     * {
@@ -19,28 +19,20 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-    }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: var(--light-gray);
-      text-align: center;
-      padding: 0 2rem 2rem;
+      background: linear-gradient(135deg, var(--background-start), var(--background-end));
       color: var(--text-color);
+      min-height: 100vh;
     }
 
     header {
       background-color: var(--primary-color);
-      width: 100%;
-      padding: 1rem 1rem 0.5rem;
       color: white;
+      padding: 2rem 1rem;
+      text-align: center;
       border-bottom: 4px solid var(--accent-color);
-      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     header img {
@@ -49,7 +41,7 @@
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.4rem;
       margin: 0.25rem 0;
       color: white;
     }
@@ -61,50 +53,57 @@
     }
 
     nav {
-      margin-bottom: 2rem;
+      margin-top: 1rem;
+      text-align: center;
+      padding-bottom: 1rem;
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       color: var(--primary-color);
-      font-weight: bold;
+      font-weight: 600;
       text-decoration: none;
+      font-size: 1rem;
     }
 
     nav a:hover {
       color: var(--accent-color);
     }
 
-    section.mission {
+    .mission {
       max-width: 800px;
       background-color: white;
-      padding: 2rem;
+      padding: 2.5rem;
+      margin: 2rem auto;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
-    section.mission h2 {
+    .mission h2 {
       font-size: 1.5rem;
       color: var(--primary-color);
+      margin-bottom: 1rem;
     }
 
-    section.mission p {
+    .mission p {
       font-size: 1rem;
       color: var(--text-color);
       line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
 
     a.contact-button {
-      margin-top: 2rem;
       display: inline-block;
+      margin-top: 1rem;
       padding: 0.75rem 1.5rem;
       background-color: var(--primary-color);
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      font-weight: 600;
+      font-weight: bold;
       font-size: 1rem;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
     a.contact-button:hover {
@@ -120,16 +119,16 @@
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" style="font-weight:bold; text-decoration:underline;">Home</a>
     <a href="products.html">Products</a>
     <a href="team.html">Our Team</a>
+    <a href="login.html">Intern Login</a>
   </nav>
 
   <section class="mission">
     <h2>Our Mission</h2>
     <p>
-      myLedgr empowers individuals to own, shape, and represent their life stories across education, work, and even privately with wellness. 
-      We are building tools that make your data meaningful.
+      myLedgr empowers individuals to own, shape, and represent their life stories across education, work, and even privately with wellness. We are building tools that make your data meaningful.
     </p>
     <h2>Our Vision</h2>
     <p>
@@ -137,6 +136,8 @@
     </p>
   </section>
 
-  <a class="contact-button" href="mailto:info@mylgr.io">Email Us</a>
+  <div style="text-align: center;">
+    <a class="contact-button" href="mailto:info@mylgr.io">Email Us</a>
+  </div>
 </body>
 </html>
