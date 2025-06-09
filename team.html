@@ -8,9 +8,9 @@
     :root {
       --primary-color: #0a2342;
       --accent-color: #007bff;
-      --background-color: #ffffff;
+      --background-start: #f4f4f9;
+      --background-end: #e1e9f0;
       --text-color: #333;
-      --light-gray: #f4f4f9;
     }
 
     * {
@@ -21,32 +21,49 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--light-gray);
+      background: linear-gradient(135deg, var(--background-start), var(--background-end));
       color: var(--text-color);
-      text-align: center;
-      padding: 2rem;
+      min-height: 100vh;
     }
 
     header {
       background-color: var(--primary-color);
       color: white;
-      padding: 1.5rem 1rem 1rem;
+      padding: 2rem 1rem;
+      text-align: center;
       border-bottom: 4px solid var(--accent-color);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      max-width: 100px;
+      margin-bottom: 0.5rem;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.4rem;
+      margin: 0.25rem 0;
+      color: white;
+    }
+
+    header .tagline {
+      font-size: 1.1rem;
+      color: #dbe4ee;
+      margin-bottom: 0.5rem;
     }
 
     nav {
       margin-top: 1rem;
+      text-align: center;
+      padding-bottom: 1rem;
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       color: var(--primary-color);
-      font-weight: bold;
+      font-weight: 600;
       text-decoration: none;
+      font-size: 1rem;
     }
 
     nav a:hover {
@@ -55,9 +72,13 @@
 
     section.team-section {
       margin-top: 2rem;
-      max-width: 1000px;
+      max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .category {
@@ -77,11 +98,12 @@
     }
 
     .member {
-      background-color: white;
+      background-color: #fefefe;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       width: 200px;
+      text-align: center;
     }
 
     .member img {
@@ -106,13 +128,15 @@
 </head>
 <body>
   <header>
+    <img src="myLGR.png" alt="myLedgr logo">
     <h1>Our Team</h1>
+    <p class="tagline">Meet the people behind the platform.</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
-    <a href="team.html">Our Team</a>
+    <a href="team.html" style="font-weight:bold; text-decoration:underline;">Our Team</a>
     <a href="login.html">Intern Login</a>
   </nav>
 
@@ -184,8 +208,8 @@
           <p>Title / Affiliation</p>
         </div>
         <div class="member">
-          <h3>Robert G. Wright5</h3>
-          <p>Legal Affairs</p>
+          <h3>Advisor 5</h3>
+          <p>Title / Affiliation</p>
         </div>
       </div>
     </div>
