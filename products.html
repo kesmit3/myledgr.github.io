@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myLedgr Products</title>
+  <title>Products - myLedgr</title>
   <style>
     :root {
       --primary-color: #0a2342;
       --accent-color: #007bff;
-      --background-color: #ffffff;
+      --background-start: #f4f4f9;
+      --background-end: #e1e9f0;
       --text-color: #333;
-      --light-gray: #f4f4f9;
     }
 
     * {
@@ -21,112 +21,110 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--light-gray);
+      background: linear-gradient(135deg, var(--background-start), var(--background-end));
       color: var(--text-color);
-      text-align: center;
-      padding: 2rem;
+      min-height: 100vh;
     }
 
     header {
       background-color: var(--primary-color);
       color: white;
-      padding: 1.5rem 1rem 1rem;
+      padding: 2rem 1rem;
+      text-align: center;
       border-bottom: 4px solid var(--accent-color);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      max-width: 100px;
+      margin-bottom: 0.5rem;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.4rem;
+      margin: 0.25rem 0;
+      color: white;
+    }
+
+    header .tagline {
+      font-size: 1.1rem;
+      color: #dbe4ee;
+      margin-bottom: 0.5rem;
     }
 
     nav {
       margin-top: 1rem;
+      text-align: center;
+      padding-bottom: 1rem;
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       color: var(--primary-color);
-      font-weight: bold;
+      font-weight: 600;
       text-decoration: none;
+      font-size: 1rem;
     }
 
     nav a:hover {
       color: var(--accent-color);
     }
 
-    section.products {
-      margin-top: 2rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+    .products-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .product {
-      background-color: white;
-      padding: 2rem;
       margin-bottom: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .product-logo {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 1rem;
-      background-color: var(--accent-color);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
     }
 
     .product h2 {
       color: var(--primary-color);
-      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
     }
 
     .product p {
+      color: var(--text-color);
       font-size: 1rem;
       line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .product img {
+      margin-top: 1rem;
+      max-width: 150px;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="myLGR.png" alt="myLedgr logo">
     <h1>Our Products</h1>
+    <p class="tagline">Tools that turn data into direction.</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
+    <a href="products.html" style="font-weight:bold; text-decoration:underline;">Products</a>
     <a href="team.html">Our Team</a>
+    <a href="login.html">Intern Login</a>
   </nav>
 
-  <section class="products">
+  <section class="products-section">
     <div class="product">
-      <div class="product-logo">CS</div>
       <h2>Career Scorecard</h2>
-      <p>
-        A personalized dashboard that helps learners and professionals track skills, achievements, and career progress. Integrated with academic records, internships, and job experiences to build a meaningful career trajectory and match emerging opportunities.
-      </p>
+      <p>A future tool that lets users track, visualize, and optimize their career journey across skills, education, and impact—connecting aspirations with achievement.</p>
+      <img src="career-scorecard-logo.png" alt="Career Scorecard logo">
     </div>
 
     <div class="product">
-      <div class="product-logo">AI</div>
-      <h2>AI-Powered Life Ledger</h2>
-      <p>
-        A smart assistant that helps users document key milestones in their educational, career, and wellness journey. Enables secure, structured narrative-building and can be used for storytelling, applications, or reflective insight.
-      </p>
-    </div>
-
-    <div class="product">
-      <div class="product-logo">HX</div>
-      <h2>Human Experience Index</h2>
-      <p>
-        A future-facing tool that aggregates meaningful life metrics (engagement, contribution, resilience) to help individuals and communities understand and grow personal and collective impact.
-      </p>
+      <h2>Human Ledger (Coming Soon)</h2>
+      <p>A personal record system that unifies education, work, health, and life data into a portable, human-readable format—empowering self-representation and private identity sharing.</p>
     </div>
   </section>
 </body>
