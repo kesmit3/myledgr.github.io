@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>myLedgr</title>
   <style>
     :root {
@@ -24,6 +24,8 @@
       background: linear-gradient(135deg, var(--background-start), var(--background-end));
       color: var(--text-color);
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -43,7 +45,6 @@
     header h1 {
       font-size: 2.4rem;
       margin: 0.25rem 0;
-      color: white;
     }
 
     header .tagline {
@@ -70,7 +71,7 @@
       color: var(--accent-color);
     }
 
-    .mission {
+    section.mission {
       max-width: 800px;
       background-color: white;
       padding: 2.5rem;
@@ -80,20 +81,20 @@
       text-align: center;
     }
 
-    .mission h2 {
+    section.mission h2 {
       font-size: 1.5rem;
       color: var(--primary-color);
       margin-bottom: 1rem;
     }
 
-    .mission p {
+    section.mission p {
       font-size: 1rem;
       color: var(--text-color);
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
 
-    a.contact-button {
+    .contact-button {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
@@ -106,14 +107,32 @@
       transition: background-color 0.3s ease;
     }
 
-    a.contact-button:hover {
+    .contact-button:hover {
       background-color: var(--accent-color);
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="myLGR.png" alt="myLedgr logo">
+    <img src="myLGR.png" alt="myLedgr logo" />
     <h1>myLedgr</h1>
     <p class="tagline">Turn milestones into momentum.</p>
   </header>
@@ -134,10 +153,11 @@
     <p>
       To create a more connected, human-centered future where people use trusted data to unlock opportunity, collaboration, and self-determination.
     </p>
+    <a class="contact-button" href="mailto:info@mylgr.io">Email Us</a>
   </section>
 
-  <div style="text-align: center;">
-    <a class="contact-button" href="mailto:info@mylgr.io">Email Us</a>
-  </div>
+  <footer>
+    © 2025 myLedgr · <a href="mailto:info@mylgr.io">Contact Us</a>
+  </footer>
 </body>
 </html>
