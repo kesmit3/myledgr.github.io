@@ -1,17 +1,139 @@
-<!-- login.html -->
-<form onsubmit="return checkPassword()">
-  <input type="password" id="pw" placeholder="Enter password">
-  <button type="submit">Enter</button>
-</form>
-<script>
-function checkPassword() {
-  const pw = document.getElementById('pw').value;
-  if (pw === 'yourpassword') {
-    window.location.href = 'interns.html';
-    return false;
-  } else {
-    alert('Incorrect password');
-    return false;
-  }
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intern Welcome - myLedgr</title>
+  <style>
+    :root {
+      --primary-color: #0a2342;
+      --accent-color: #007bff;
+      --background-start: #f4f4f9;
+      --background-end: #e1e9f0;
+      --text-color: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--background-start), var(--background-end));
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 4px solid var(--accent-color);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      max-width: 100px;
+      margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin: 0.25rem 0;
+      color: white;
+    }
+
+    header .tagline {
+      font-size: 1.1rem;
+      color: #dbe4ee;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    nav a {
+      margin: 0 1.2rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="myLGR.png" alt="myLedgr logo">
+    <h1>Welcome Interns</h1>
+    <p class="tagline">Learn how to make the most of your journey at myLedgr.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="team.html">Our Team</a>
+    <a href="login.html">Intern Login</a>
+    <a href="interns.html" style="font-weight:bold; text-decoration:underline;">Interns</a>
+  </nav>
+
+  <section class="content">
+    <h2>Welcome Video</h2>
+    <p>Hear directly from our leadership team about what to expect and how to succeed during your internship experience.</p>
+    <video controls>
+      <source src="welcome-interns.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <footer>
+    © 2025 myLedgr · <a href="mailto:info@mylgr.io">Contact Us</a>
+  </footer>
+</body>
+</html>
