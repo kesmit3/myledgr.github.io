@@ -24,6 +24,8 @@
       background: linear-gradient(135deg, var(--background-start), var(--background-end));
       color: var(--text-color);
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -107,8 +109,11 @@
     }
 
     .member img {
-      width: 100px;
-      height: 100px;
+      max-width: 100px;
+      max-height: 100px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 0.5rem;
@@ -123,6 +128,24 @@
     .member p {
       font-size: 0.9rem;
       color: var(--text-color);
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -142,79 +165,18 @@
 
   <section class="team-section">
     <div class="category">
-      <h2>Core Leadership</h2>
+      <h2>Test Render</h2>
       <div class="member-list">
         <div class="member">
-          <img src="kim-wright.png" alt="Kim Wright">
-          <h3>Kim Wright</h3>
-          <p>CEO / Founder</p>
-        </div>
-        <div class="member">
-          <img src="paul-ingram.jpg" alt="Paul Ingram">
-          <h3>Paul Ingram</h3>
-          <p>CTO / Co-Founder</p>
-        </div>
-        <div class="member">
-          <img src="coo-placeholder.jpg" alt="Antoinette White">
-          <h3>Antoinette White</h3>
-          <p>COO / Co-Founder</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h2>Interns</h2>
-      <div class="member-list">
-        <div class="member">
-          <img src="aviel-gasko.jpg" alt="Aviel Gasko">
-          <h3>Aviel Gasko</h3>
-          <p>Business Analyst - Intern</p>
-        </div>
-        <div class="member">
-          <img src="deeksha-bandi.jpg" alt="Deeksha Bandi">
-          <h3>Deeksha Bandi</h3>
-          <p>Product Development - Intern</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h2>Interns & Externs</h2>
-      <div class="member-list">
-        <div class="member">
-          <h3>Summer Interns</h3>
-          <p>Scholar contributors learning from myLedgr's mission and development.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h2>Board of Advisors</h2>
-      <div class="member-list">
-        <div class="member">
-          <h3>Advisor 1</h3>
-          <p>Title / Affiliation</p>
-        </div>
-        <div class="member">
-          <h3>Advisor 2</h3>
-          <p>Title / Affiliation</p>
-        </div>
-        <div class="member">
-          <h3>Advisor 3</h3>
-          <p>Title / Affiliation</p>
-        </div>
-        <div class="member">
-          <h3>Advisor 4</h3>
-          <p>Title / Affiliation</p>
-        </div>
-        <div class="member">
-          <h3>Robert G. Wright </h3>
-          <p>Legal Affairs / Advisor</p>
+          <img src="large-portrait.jpg" alt="Test Image">
+          <h3>Test User</h3>
+          <p>Sample Position</p>
         </div>
       </div>
     </div>
   </section>
- <footer>
+
+  <footer>
     © 2025 myLedgr · <a href="mailto:info@mylgr.io">Contact Us</a>
   </footer>
 </body>
